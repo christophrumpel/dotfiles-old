@@ -1,0 +1,128 @@
+#!/bin/bash
+
+# Colors
+red=`tput setaf 1`
+green=`tput setaf 2`
+reset=`tput sgr0`
+
+
+
+echo "#------------------------------------------------#"
+echo "#	*${green}STARTING INSTALLATION${reset}*"
+echo "#------------------------------------------------#"
+echo ""
+
+# Install zsh
+echo "#------------------------------------------------#"
+echo "#	*${green}OH-MY-ZSH${reset}* Installing..."
+echo "#------------------------------------------------#"
+echo ""
+
+[ -f $HOME/.oh-my-zsh ] && rm -rf $HOME/.oh-my-zsh
+curl -L http://install.ohmyz.sh | sh
+
+# Symlink zsh prefs
+[ -f $HOME/.zshrc ] && rm $HOME/.zshrc
+ln -s $HOME/.dotfiles/shell/.zshrc $HOME/.zshrc
+
+# Symlink vim prefs
+[ -f $HOME/.vimrc ] && rm $HOME/.vimrc
+ln -s $HOME/.dotfiles/shell/.vimrc $HOME/.vimrc
+
+# Fix missing font characters (see https://github.com/robbyrussell/oh-my-zsh/issues/1906)
+#cd ~/.oh-my-zsh/themes/
+#git checkout d6a36b1 agnoster.zsh-theme
+
+# Install composer
+echo ""
+echo "#------------------------------------------------#"
+echo "#	*${green}COMPOSER${reset}* Installing..."
+echo "#------------------------------------------------#"
+echo ""
+cd ~/.dotfiles
+curl -sS https://getcomposer.org/installer | php
+mv -f composer.phar /usr/local/bin/composer
+
+# Install homebrew
+echo ""
+echo "#------------------------------------------------#"
+echo "#	*${green}HOMEBREW${reset}* Installing..."
+echo "#------------------------------------------------#"
+echo ""
+echo install homebrew
+sudo rm -rf /usr/local/Cellar /usr/local/.git && brew cleanup
+ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+
+# Install wget
+echo ""
+echo "#------------------------------------------------#"
+echo "#	*${green}WGET${reset}* Installing..."
+echo "#------------------------------------------------#"
+echo ""
+brew install wget --overwrite
+
+# Install httpie disk analyzer
+echo ""
+echo "#------------------------------------------------#"
+echo "#	*${green}HTTPIE${reset}* Installing..."
+echo "#------------------------------------------------#"
+echo ""
+brew install httpie
+
+# Install ncdu
+echo ""
+echo "#------------------------------------------------#"
+echo "#	*${green}NCDU${reset}* Installing..."
+echo "#------------------------------------------------#"
+echo ""
+brew install ncdu
+
+# Install envoy
+echo ""
+echo "#------------------------------------------------#"
+echo "#	*${green}LARAVEL ENVOY${reset}* Installing..."
+echo "#------------------------------------------------#"
+echo ""
+composer global require "laravel/envoy=~1.0"
+
+
+# Install php 5.6
+echo ""
+echo "#------------------------------------------------#"
+echo "#	*${green}PHP 5.6${reset}* Installing..."
+echo "#------------------------------------------------#"
+echo ""
+curl -s http://php-osx.liip.ch/install.sh | bash -s 7.0
+
+echo ""
+echo "#------------------------------------------------#"
+echo "#	*${green}FINISHED INSTALLATION${reset}*"
+echo "#------------------------------------------------#"
+echo ""
+
+echo "#------------------------------------------------#"
+echo "#	*${green}NEXT${reset}* Next steps"
+echo "#------------------------------------------------#"
+echo ""
+
+# Patch font contains right characters for promt
+echo "1. Install menlo patched font included in ~/.dotfiles/misc https://gist.github.com/qrush/1595572/raw/Menlo-Powerline.otf" 
+
+# Install solarized http://ethanschoonover.com/solarized
+echo "2. Install patched solarized theme included in ~/.dotfiles/misc"
+echo ""
+
+echo "#------------------------------------------------#"
+echo "#	*${green}OPTIONAL${reset}*"
+echo "#------------------------------------------------#"
+echo ""
+
+echo "1. Set some sensible os x defaults by running: $HOME/.dotfiles/osx/set-defaults.sh"
+
+echo ""
+echo "#------------------------------------------------#"
+echo "#	*${green}THE END${reset}*"
+echo "#------------------------------------------------#"
+
+# Reload shell settings
+. ~/.zshrc

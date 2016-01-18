@@ -1,0 +1,31 @@
+#!/bin/bash
+
+# Colors
+red=`tput setaf 1`
+green=`tput setaf 2`
+reset=`tput sgr0`
+
+# Bootstrap installs things.
+
+function bootstrapTerminal() {	
+	sudo -v #ask password beforehand
+	source ~/.dotfiles/installscript
+}
+
+echo "#------------------------------------------------#"
+echo "#	*${green}STARTING INSTALLATION${reset}*"
+echo "#------------------------------------------------#"
+echo ""
+echo "#------------------------------------------------#"
+echo "#	*${green}BOOTSTRAP${reset}* Install CR dotfiles"
+echo "#------------------------------------------------#"
+echo "This will reset your terminal to get it to the next level!"
+echo "Are you ready? (${green}y${reset}/${red}n${reset})"
+read -q "reply?Answer?"
+echo ""
+
+
+if [[ $reply =~ ^[Yy]$ ]]
+then
+   bootstrapTerminal
+fi   
