@@ -1,7 +1,7 @@
 CR dotfiles
 =============
 
-Heavily inspired by (freekmurze)[https://github.com/freekmurze/dotfiles].
+Heavily inspired by freekmurze (https://github.com/freekmurze/dotfiles).
 
 Use the bootstrap script to install the shell setup.
 
@@ -27,7 +27,9 @@ Use the bootstrap script to install the shell setup.
 
 #Setup
 
-    ./install
+Run this command to start the installation. (Change the path if needed)
+
+    . ~/.dotfiles/install
 
 
 After the installation you will need to:
