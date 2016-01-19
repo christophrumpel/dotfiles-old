@@ -27,7 +27,8 @@ Use the bootstrap script to install the shell setup.
 
 #Setup
 
-Run this command to start the installation. (Change the path if needed)
+For this setup you will need to have your dotfiles in a directory called "~/.dotfiles".
+Run this command to start the installation.
 
     . ~/.dotfiles/install
 
