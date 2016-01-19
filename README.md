@@ -5,6 +5,8 @@ Heavily inspired by freekmurze (https://github.com/freekmurze/dotfiles).
 
 Use the bootstrap script to install the shell setup.
 
+#Result
+
 #Included
 
 
