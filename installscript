@@ -87,6 +87,7 @@ composer global require "laravel/envoy=~1.0"
 
 
 # Install php 7.0
+# Using http://php-osx.liip.ch/
 echo ""
 echo "#------------------------------------------------#"
 echo "#	*${green}PHP 7.0${reset}* Installing..."
