@@ -7,6 +7,11 @@ Use the bootstrap script to install the shell setup.
 
 #Result
 
+This setup uses the Agnoster theme with this beautiful prompt.
+
+
+![zhs](http://christophrumpel.github.io/dotfiles/misc/screenshot.png)
+
 #Included
 
 
