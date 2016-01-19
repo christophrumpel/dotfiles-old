@@ -110,7 +110,7 @@ alias ci="composer install"
 alias cda="composer dump-autoload -o"
 
 #-----------------------------------------------------------------------------------#
-#	*END* LARAVEL
+#	*END* PHP
 #-----------------------------------------------------------------------------------#
 
 #-----------------------------------------------------------------------------------#
@@ -136,14 +136,14 @@ alias compselfupdate='sudo composer self-update'
 
 
 #-----------------------------------------------------------------------------------#
-#	*START* Wordpress
+#	*START* WORDPRESS
 #-----------------------------------------------------------------------------------#
 
 alias wp_theme="cd wp-content/themes/"
 alias wp_download="wget http://wordpress.org/latest.tar.gz"
 
 #-----------------------------------------------------------------------------------#
-#	*END* Wordpress
+#	*END* WORDPRESS
 #-----------------------------------------------------------------------------------#
 
 
@@ -160,7 +160,7 @@ alias vhosts='sudo subl /etc/apache2/extra/httpd-vhosts.conf'
 
 
 #-----------------------------------------------------------------------------------#
-#	*START* Network
+#	*START* NETWORK
 #-----------------------------------------------------------------------------------#
 
 # IP addresses
@@ -172,7 +172,7 @@ alias ip_extern="curl ipecho.net/plain; echo"
 alias whois="whois -h whois-servers.net"
 
 #-----------------------------------------------------------------------------------#
-#	*END* Network
+#	*END* NETWORK
 #-----------------------------------------------------------------------------------#
 
 
@@ -213,7 +213,7 @@ fi
 
 
 #-----------------------------------------------------------------------------------#
-#	*START* File handling
+#	*START* FILE HANDLING
 #-----------------------------------------------------------------------------------#
 
 # Recursively delete `.DS_Store` files
@@ -230,13 +230,13 @@ alias show="defaults write com.apple.finder AppleShowAllFiles -bool true && kill
 alias hide="defaults write com.apple.finder AppleShowAllFiles -bool false && killall Finder"
 
 #-----------------------------------------------------------------------------------#
-#	*END* File handling
+#	*END* FILE HANDLING
 #-----------------------------------------------------------------------------------#
 
 
 
 #-----------------------------------------------------------------------------------#
-#	*START* Specials
+#	*START* SPECIALS
 #-----------------------------------------------------------------------------------#
 
 # Hide/show all desktop icons (useful when presenting)
@@ -244,5 +244,5 @@ alias hidedesktop="defaults write com.apple.finder CreateDesktop -bool false && 
 alias showdesktop="defaults write com.apple.finder CreateDesktop -bool true && killall Finder"
 
 #-----------------------------------------------------------------------------------#
-#	*END* Specials
+#	*END* SPECIALS
 #-----------------------------------------------------------------------------------#
