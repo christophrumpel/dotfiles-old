@@ -47,25 +47,6 @@ alias goto_homestead="cd ~/Documents/websites/homestead"
 
 
 #-----------------------------------------------------------------------------------#
-#	*START* SSH
-#-----------------------------------------------------------------------------------#
-
-alias sshcr='ssh ssh-w005dcde@nomoreencore.com'
-alias sshlat='ssh ssh-w00b570e@liechtenecker.at'
-alias sshapps='ssh ssh-w00dd769@applications-liechtenecker.at'
-alias sshwt='ssh ssh-w0119120@w0119120.kasserver.com'
-alias sshwtcms='ssh ssh-w0119121@w0119121.kasserver.com'
-alias sshbene='ssh ssh-w00fe252@app.bene.com'
-alias sshelo='ssh ssh-w00a833e@eloquent.at'
-alias sshslow='ssh ssh-w0128912@slow-marketing.at'
-
-#-----------------------------------------------------------------------------------#
-#	*END* SERVER
-#-----------------------------------------------------------------------------------#
-
-
-
-#-----------------------------------------------------------------------------------#
 #	*START* Mac Apache
 #-----------------------------------------------------------------------------------#
 
