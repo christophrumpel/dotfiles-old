@@ -5,6 +5,13 @@ Heavily inspired by freekmurze (https://github.com/freekmurze/dotfiles).
 
 Use the bootstrap script to install the shell setup.
 
+#Result
+
+This setup uses the Agnoster theme with this beautiful prompt.
+
+
+![Prompt](https://raw.githubusercontent.com/christophrumpel/dotfiles/master/misc/screenshot.png)
+
 #Included
 
 
@@ -27,7 +34,8 @@ Use the bootstrap script to install the shell setup.
 
 #Setup
 
-Run this command to start the installation. (Change the path if needed)
+For this setup you will need to have your dotfiles in a directory called "~/.dotfiles".
+Run this command to start the installation.
 
     . ~/.dotfiles/install
 

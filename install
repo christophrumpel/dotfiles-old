@@ -20,10 +20,13 @@ echo "#------------------------------------------------#"
 echo "#	*${green}BOOTSTRAP${reset}* Install CR dotfiles"
 echo "#------------------------------------------------#"
 echo "This will reset your terminal to get it to the next level!"
+echo "(Please read the install info before https://github.com/christophrumpel/dotfiles)"
 echo "Are you ready? (${green}y${reset}/${red}n${reset})"
-read -q "reply?Answer?"
 echo ""
 
+[ -f $HOME/.zshrc ] && read -q "reply?Answer: " || read -r -p "Answer: " reply
+
+echo ""
 
 if [[ $reply =~ ^[Yy]$ ]]
 then

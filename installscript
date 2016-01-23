@@ -86,10 +86,11 @@ echo ""
 composer global require "laravel/envoy=~1.0"
 
 
-# Install php 5.6
+# Install php 7.0
+# Using http://php-osx.liip.ch/
 echo ""
 echo "#------------------------------------------------#"
-echo "#	*${green}PHP 5.6${reset}* Installing..."
+echo "#	*${green}PHP 7.0${reset}* Installing..."
 echo "#------------------------------------------------#"
 echo ""
 curl -s http://php-osx.liip.ch/install.sh | bash -s 7.0
