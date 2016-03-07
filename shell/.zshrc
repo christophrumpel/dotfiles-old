@@ -41,7 +41,7 @@ source $ZSH/oh-my-zsh.sh
 
 # Load the shell dotfiles, and then some:
 # * ~/.extra can be used for other settings you don’t want to commit.
-for file in ~/.dotfiles/shell/.{exports,aliases,functions}; do
+for file in ~/.dotfiles/shell/.{exports,aliases,functions,private}; do
 	[ -r "$file" ] && [ -f "$file" ] && source "$file"
 done
 
