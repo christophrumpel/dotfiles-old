@@ -101,6 +101,9 @@ systemsetup -settimezone "Europe/Vienna" > /dev/null
 # Disable auto-correct
 defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
 
+# Make using vim keys easier on OSX
+defaults write -g ApplePressAndHoldEnabled -bool false
+
 
 ###############################################################################
 # Screen                                                                      #
