@@ -3,7 +3,7 @@
 #-----------------------------------------------------------------------------------#
 
 # Reload bash
-alias reload_bash=". ~/.zshrc"
+alias reload_bash=". ~/.dotfiles/shell/.zshrc"
 
 # Be gentle
 alias please="sudo"
@@ -38,7 +38,8 @@ alias goto_projects='cd ~/Documents/projects/'
 alias goto_articles="cd /Volumes/HD/projects/Websites/christoph-rumpel.com/blog/articles/"
 alias goto_dotfiles="cd ~/dotfiles"
 alias goto_websites="cd ~/Documents/websites"
-alias goto_valet="cd ~/Documents/websites/valet"
+alias goto_valet="cd ~/Documents/valet"
+
 #-----------------------------------------------------------------------------------#
 #	*END* GOTO
 #-----------------------------------------------------------------------------------#
@@ -89,6 +90,8 @@ alias cu="composer update"
 alias cr="composer require"
 alias ci="composer install"
 alias cda="composer dump-autoload -o"
+
+alias homestead='function __homestead() { (cd ~/Homestead && vagrant $*); unset -f __homestead; }; __homestead'
 
 #-----------------------------------------------------------------------------------#
 #	*END* PHP
