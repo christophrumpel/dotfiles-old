@@ -94,13 +94,21 @@ echo "#------------------------------------------------#"
 echo ""
 composer global require "laravel/envoy=~1.0"
 
-# Install envoy
+# Install PHP CS Fixer
 echo ""
 echo "#------------------------------------------------#"
 echo "#	*${green}PHP CS FIXER${reset}* Installing..."
 echo "#------------------------------------------------#"
 echo ""
 composer global require friendsofphp/php-cs-fixer
+
+# Install Laravel Installer
+echo ""
+echo "#------------------------------------------------#"
+echo "#	*${green}Laravel installer${reset}* Installing..."
+echo "#------------------------------------------------#"
+echo ""
+composer global require "laravel/installer"
 
 # Install php 7.0
 # Using http://php-osx.liip.ch/

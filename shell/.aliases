@@ -38,7 +38,7 @@ alias goto_projects='cd ~/Documents/projects/'
 alias goto_articles="cd /Volumes/HD/projects/Websites/christoph-rumpel.com/blog/articles/"
 alias goto_dotfiles="cd ~/dotfiles"
 alias goto_websites="cd ~/Documents/websites"
-alias goto_valet="cd ~/Documents/valet"
+alias goto_valet="cd ~/Documents/Websites/valet"
 
 #-----------------------------------------------------------------------------------#
 #	*END* GOTO

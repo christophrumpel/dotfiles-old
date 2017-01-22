@@ -39,6 +39,8 @@ source $ZSH/oh-my-zsh.sh
 
 #export=Users/$DEFAULT_USER/.rvm/gems/ruby-2.1.2/bin:$PATH
 
+export PATH="/usr/local/sbin:$PATH"
+
 # Load the shell dotfiles, and then some:
 # * ~/.extra can be used for other settings you don’t want to commit.
 for file in ~/.dotfiles/shell/.{exports,aliases,functions,private}; do
