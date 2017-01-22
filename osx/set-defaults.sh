@@ -1,4 +1,10 @@
 #!/usr/bin/env bash
+
+# Colors
+red=`tput setaf 1`
+green=`tput setaf 2`
+reset=`tput sgr0`
+
 echo ""
 echo "#------------------------------------------------#"
 echo "#	*${green}Start setting OSX defaults${reset}* ..."
@@ -18,20 +24,6 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
 # Disable the sound effects on boot
 sudo nvram SystemAudioVolume=" "
-
-# Menu bar: disable transparency
-for domain in ~/Library/Preferences/ByHost/com.apple.systemuiserver.*; do
-	defaults write "${domain}" dontAutoLoad -array \
-		"/System/Library/CoreServices/Menu Extras/TimeMachine.menu" \
-#       "/System/Library/CoreServices/Menu Extras/Volume.menu"
-	    "/System/Library/CoreServices/Menu Extras/AirPort.menu" \
-#		"/System/Library/CoreServices/Menu Extras/User.menu"
-done
-defaults write com.apple.systemuiserver menuExtras -array \
-	"/System/Library/CoreServices/Menu Extras/Bluetooth.menu" \
-	"/System/Library/CoreServices/Menu Extras/AirPort.menu" \
-#	"/System/Library/CoreServices/Menu Extras/Battery.menu" 
-	"/System/Library/CoreServices/Menu Extras/Clock.menu"
 
 # Set sidebar icon size to medium
 defaults write NSGlobalDomain NSTableViewDefaultSizeMode -int 2
