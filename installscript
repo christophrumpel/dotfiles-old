@@ -21,13 +21,22 @@ echo ""
 [ -f $HOME/.oh-my-zsh ] && rm -rf $HOME/.oh-my-zsh
 curl -L http://install.ohmyz.sh | sh
 
+# Global gitigore
+ln -s $HOME/.dotfiles/shell/.global-gitignore $HOME/.global-gitignore
+git config --global core.excludesfile $HOME/.global-gitignore
+
 # Symlink zsh prefs
 [ -f $HOME/.zshrc ] && rm $HOME/.zshrc
 ln -s $HOME/.dotfiles/shell/.zshrc $HOME/.zshrc
 
+
 # Symlink vim prefs
-[ -f $HOME/.vimrc ] && rm $HOME/.vimrc
+rm $HOME/.vimrc
 ln -s $HOME/.dotfiles/shell/.vimrc $HOME/.vimrc
+
+
+rm $HOME/.vim
+ln -s $HOME/.dotfiles/shell/.vim $HOME/.vim
 
 # Fix missing font characters (see https://github.com/robbyrussell/oh-my-zsh/issues/1906)
 #cd ~/.oh-my-zsh/themes/
@@ -85,15 +94,80 @@ echo "#------------------------------------------------#"
 echo ""
 composer global require "laravel/envoy=~1.0"
 
+# Install PHP CS Fixer
+echo ""
+echo "#------------------------------------------------#"
+echo "#	*${green}PHP CS FIXER${reset}* Installing..."
+echo "#------------------------------------------------#"
+echo ""
+composer global require friendsofphp/php-cs-fixer
+
+# Install Laravel Installer
+echo ""
+echo "#------------------------------------------------#"
+echo "#	*${green}Laravel installer${reset}* Installing..."
+echo "#------------------------------------------------#"
+echo ""
+composer global require "laravel/installer"
 
 # Install php 7.0
 # Using http://php-osx.liip.ch/
 echo ""
 echo "#------------------------------------------------#"
-echo "#	*${green}PHP 7.0${reset}* Installing..."
+echo "#	*${green}PHP 7.1${reset}* Installing..."
 echo "#------------------------------------------------#"
 echo ""
-curl -s http://php-osx.liip.ch/install.sh | bash -s 7.0
+brew tap homebrew/dupes
+brew tap homebrew/versions
+brew tap homebrew/homebrew-php
+brew install php71
+brew install php71-xdebug
+sudo brew services start homebrew/php/php71
+brew install homebrew/php/php71-mcrypt
+brew install homebrew/php/php71-imagick
+
+# Install Redis
+echo ""
+echo "#------------------------------------------------#"
+echo "#	*${green}Redis${reset}* Installing..."
+echo "#------------------------------------------------#"
+echo ""
+brew install redis
+brew install --HEAD homebrew/php/php71-redis
+
+# Install Laravel Valet
+echo ""
+echo "#------------------------------------------------#"
+echo "#	*${green}Laravel Valet${reset}* Installing..."
+echo "#------------------------------------------------#"
+echo ""
+composer global require laravel/valet
+valet install
+
+# Install MariaDB
+echo ""
+echo "#------------------------------------------------#"
+echo "#	*${green}MariaDB${reset}* Installing..."
+echo "#------------------------------------------------#"
+echo ""
+brew install mariadb
+
+# Install Yarn
+echo ""
+echo "#------------------------------------------------#"
+echo "#	*${green}Yarn${reset}* Installing..."
+echo "#------------------------------------------------#"
+echo ""
+brew install yarn
+
+# Install Gulp
+echo ""
+echo "#------------------------------------------------#"
+echo "#	*${green}Gulp${reset}* Installing..."
+echo "#------------------------------------------------#"
+echo ""
+npm install -g gulp
+
 
 echo ""
 echo "#------------------------------------------------#"
