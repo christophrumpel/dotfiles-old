@@ -39,6 +39,7 @@ alias goto_articles="cd /Volumes/HD/projects/Websites/christoph-rumpel.com/blog/
 alias goto_dotfiles="cd ~/dotfiles"
 alias goto_websites="cd ~/Documents/websites"
 alias goto_valet="cd ~/Documents/Websites/valet"
+alias gv="cd ~/Documents/Websites/valet"
 
 #-----------------------------------------------------------------------------------#
 #	*END* GOTO

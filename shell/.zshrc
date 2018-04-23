@@ -48,3 +48,5 @@ for file in ~/.dotfiles/shell/.{exports,aliases,functions,private}; do
 done
 
 unset file
+
+export PATH="$HOME/.yarn/bin:$PATH"
