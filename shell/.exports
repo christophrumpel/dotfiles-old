@@ -20,3 +20,7 @@ export MANPAGER="less -X"
 
 # Always enable colored `grep` output
 export GREP_OPTIONS="--color=auto"
+
+# Use new installed php version
+#export PATH=/usr/local/php5/bin:$PATH
+export PATH="$(brew --prefix homebrew/php/php71)/bin:$PATH"  

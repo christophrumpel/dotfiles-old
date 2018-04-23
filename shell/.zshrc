@@ -38,6 +38,7 @@ plugins=(git laravel4 laravel5 composer osx vagrant gitfast)
 source $ZSH/oh-my-zsh.sh
 
 #export=Users/$DEFAULT_USER/.rvm/gems/ruby-2.1.2/bin:$PATH
+export PATH="/usr/local/sbin:$PATH"
 
 export PATH="/usr/local/sbin:$PATH"
 
